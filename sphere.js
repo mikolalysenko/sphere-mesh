@@ -5,7 +5,8 @@ var cubeMesh = require("cube-mesh")
 //Creates a spherical mesh
 //  resolution is an integer representing number of (vertices/6)^(1/2)
 //  radius is the radius of the sphere
-function sphereMesh(radius, resolution) {
+function sphereMesh(resolution, radius) {
+  resolution = Math.min(resolution, 2)
   var base = cubeMesh(resolution)
   
   for(var i=0; i<base.positions.length; ++i) {
