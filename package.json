@@ -1,6 +1,6 @@
 {
   "name": "sphere-mesh",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Generates subdivide spheres",
   "main": "sphere.js",
   "dependencies": {
