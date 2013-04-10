@@ -1,10 +1,10 @@
 {
   "name": "sphere-mesh",
   "version": "0.2.1",
-  "description": "Generates subdivide spheres",
+  "description": "Generates subdivided spheres",
   "main": "sphere.js",
   "dependencies": {
-    "cube-mesh": "~0.0.2"
+    "cube-mesh": "~0.0.4"
   },
   "devDependencies": {
     "tap": "~0.4.1",
