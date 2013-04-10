@@ -6,22 +6,23 @@ var cubeMesh = require("cube-mesh")
 //  resolution is an integer representing number of (vertices/6)^(1/2)
 //  radius is the radius of the sphere
 function sphereMesh(resolution, radius) {
-  resolution = Math.max(resolution, 3)
   var base = cubeMesh(resolution)
-  
-  for(var i=0; i<base.positions.length; ++i) {
-    var p = base.positions[i];
-    var l = 0.0;
-    for(var j=0; j<3; ++j) {
-      l += p[j] * p[j];
+    , i, j, p, l
+  if(!radius) {
+    radius = 1.0
+  }
+  for(i=0; i<base.positions.length; ++i) {
+    p = base.positions[i]
+    l = 0.0
+    for(j=0; j<3; ++j) {
+      l += p[j] * p[j]
     }
     l = radius / Math.sqrt(l);
-    for(var j=0; j<3; ++j) {
-      p[j] *= l;
+    for(j=0; j<3; ++j) {
+      p[j] *= l
     }
   }
-  
-  return base;
+  return base
 }
 
 module.exports = sphereMesh
